@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3cuzYFZ8EeuEnNc21wY20g" name="OpenWeather">
+  <packagedElement xmi:type="uml:Package" xmi:id="_Rsym0FZ9EeuEnNc21wY20g" name="com.esame.OpenWeather.Model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_xkG9sFZ9EeuEnNc21wY20g" name="metadata" visibility="public">
+      <packageImport xmi:id="_7qxrsFZ9EeuEnNc21wY20g">
+        <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+      </packageImport>
+      <ownedAttribute xmi:id="_0lwJwFZ9EeuEnNc21wY20g" name="city">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_4yJRsFZ9EeuEnNc21wY20g" name="state">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_JJX-0FZ-EeuEnNc21wY20g" name="GetCity"/>
+      <ownedOperation xmi:id="_PrXFIFZ-EeuEnNc21wY20g" name="GetState"/>
+      <ownedOperation xmi:id="_TlKBMFZ-EeuEnNc21wY20g" name="SetCity">
+        <ownedParameter xmi:id="_U8IbMFZ-EeuEnNc21wY20g" name="city">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_a2wmkFZ-EeuEnNc21wY20g" name="SetState">
+        <ownedParameter xmi:id="_dO1RMFZ-EeuEnNc21wY20g" name="state">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqV3oFZ-EeuEnNc21wY20g" name="Dati" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_XMLnsFZ9EeuEnNc21wY20g" name="com.esame.OpenWeather.Stats"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_aqb3QFZ9EeuEnNc21wY20g" name="com.esame.OpenWeather.Filters">
+    <packagedElement xmi:type="uml:Class" xmi:id="_IymBEFZ_EeuEnNc21wY20g" name="CloudFilter" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_eL-EUFZ9EeuEnNc21wY20g" name="com.esame.OpenWeather.Services">
+    <packagedElement xmi:type="uml:Class" xmi:id="_3QZ8sFZ-EeuEnNc21wY20g" name="CallAPI" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6-f_EFZ-EeuEnNc21wY20g" name="ReadWrite" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_inOusFZ9EeuEnNc21wY20g" name="com.esame.OpenWeather.Controller"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_nt67sFZ9EeuEnNc21wY20g" name="com.esame.OpenWeather.Exception"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_kI31sFZ_EeuEnNc21wY20g" name="Utente">
+    <eAnnotations xmi:id="_kI31sVZ_EeuEnNc21wY20g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_kI31slZ_EeuEnNc21wY20g" key="Human"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_npTPgFZ_EeuEnNc21wY20g" name="Filtraggio Statitiche"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_unxdgFZ_EeuEnNc21wY20g" name="Consultare Statistiche"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_46RBAFZ_EeuEnNc21wY20g" name="Stabilire Soglia Errore"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DghOAFaAEeuEnNc21wY20g" memberEnd="_DghOAVaAEeuEnNc21wY20g _DghOAlaAEeuEnNc21wY20g">
+    <ownedEnd xmi:id="_DghOAVaAEeuEnNc21wY20g" type="_kI31sFZ_EeuEnNc21wY20g" association="_DghOAFaAEeuEnNc21wY20g"/>
+    <ownedEnd xmi:id="_DghOAlaAEeuEnNc21wY20g" type="_npTPgFZ_EeuEnNc21wY20g" association="_DghOAFaAEeuEnNc21wY20g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_EbRmEFaAEeuEnNc21wY20g" memberEnd="_EbRmEVaAEeuEnNc21wY20g _EbRmElaAEeuEnNc21wY20g">
+    <ownedEnd xmi:id="_EbRmEVaAEeuEnNc21wY20g" type="_kI31sFZ_EeuEnNc21wY20g" association="_EbRmEFaAEeuEnNc21wY20g"/>
+    <ownedEnd xmi:id="_EbRmElaAEeuEnNc21wY20g" type="_unxdgFZ_EeuEnNc21wY20g" association="_EbRmEFaAEeuEnNc21wY20g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FYFzoFaAEeuEnNc21wY20g" memberEnd="_FYFzoVaAEeuEnNc21wY20g _FYFzolaAEeuEnNc21wY20g">
+    <ownedEnd xmi:id="_FYFzoVaAEeuEnNc21wY20g" type="_kI31sFZ_EeuEnNc21wY20g" association="_FYFzoFaAEeuEnNc21wY20g"/>
+    <ownedEnd xmi:id="_FYFzolaAEeuEnNc21wY20g" type="_46RBAFZ_EeuEnNc21wY20g" association="_FYFzoFaAEeuEnNc21wY20g"/>
+  </packagedElement>
+</uml:Model>
